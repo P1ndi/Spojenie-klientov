@@ -1,0 +1,15 @@
+String vsetko, vsetko2;
+for(Int i=0; i<Input_0.Records.Count; i++)
+   { 
+   vsetko = ""; vsetko2="";
+   for(Int j=0; j<Input_0.Records[i].Records_.Count; j++)
+      {
+      vsetko = Input_0.Records[i].Records_[j].CD_MSISDN;
+      vsetko2 = vsetko2+", " + vsetko;           
+      }
+   
+   Output_0.Records.vsetko = vsetko2;   
+   Output_0.Records.inc = Input_0.Records[i].inc;
+   
+   Output_0.Records.commit();
+   }
